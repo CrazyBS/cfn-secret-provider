@@ -28,7 +28,7 @@ Outputs:
         Value: !Ref AccessKey.SMTPPassword
 ```
 
-The access key id, access secret and the smtp password are stored in the parameter store under the paths `ParameterPath/aws_access_key_id`, `ParameterPath/aws_access_secret_key` and `ParameterPath/smtp_password` respectively. 
+The access key id, access secret and the smtp password are stored in the parameter store under the paths `<ParameterPath>/aws_access_key_id`, `<ParameterPath>/aws_access_secret_key` and `<ParameterPath>/smtp_password` respectively. 
 
 ## Properties
 You can specify the following properties:
@@ -39,7 +39,7 @@ You can specify the following properties:
 - `Status`  - Active or Inactive
 - `ReturnSecret`  - returns access id and access secret as attribute
 - `ReturnPassword`  - returns access id and SMTP password as attribute
-- `NoEcho` - indicates whether the secret can be an output value, default 'True' meaning it cannot.   
+- `NoEcho` - indicate whether output of the return values is replaced by `*****`, default True.
 
 ## Return values
 With 'Fn::GetAtt' the following values are available:
